@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微积分概念入门（三）</title>
-    <style type="text/css" media="all">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>微积分概念入门（三）</title>
+<style media="all" type="text/css">
       body {
         margin: 0;
         font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
@@ -51,29 +52,29 @@
         color: #28A1C5;
       }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="post">
-        <h1 class="title">微积分概念入门（三）</h1>
-        <div class="show-content">
-          <p>作者保留版权</p><p>数学从高观点来说，就是用同样的思路来解决不同的问题。今天又抽空给孩子介绍了怎么用无限的概念推导金字塔的体积公式。</p><p>首先从定义出发，与三角形求面积类似，以体积的定义我们无法直接求出非正方体、长方体的体积。中小学给出的推导往往是技巧性的，下面是一个例子。</p><div class="image-package">
-<img name="00AF64DD-DBC8-44F0-9CA4-0C606854A07C.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-3c71452719d423de.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-3c71452719d423de.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-3c71452719d423de.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
-</div><p><br></p><div class="image-package">
-<img name="2E5CAC52-86E0-4B01-A0CF-2767DE44243A.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-e436a202dfa38ed0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-e436a202dfa38ed0.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-e436a202dfa38ed0.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
+</head>
+<body>
+<div class="container">
+<div class="post">
+<h1 class="title">微积分概念入门（三）</h1>
+<div class="show-content">
+<p>作者保留版权</p><p>数学从高观点来说，就是用同样的思路来解决不同的问题。今天又抽空给孩子介绍了怎么用无限的概念推导金字塔的体积公式。</p><p>首先从定义出发，与三角形求面积类似，以体积的定义我们无法直接求出非正方体、长方体的体积。中小学给出的推导往往是技巧性的，下面是一个例子。</p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-3c71452719d423de.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-3c71452719d423de.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="00AF64DD-DBC8-44F0-9CA4-0C606854A07C.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-3c71452719d423de.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
+</div><p><br/></p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-e436a202dfa38ed0.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-e436a202dfa38ed0.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="2E5CAC52-86E0-4B01-A0CF-2767DE44243A.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-e436a202dfa38ed0.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
 </div><p>也可以看youtube示例：<a href="https://www.youtube.com/watch?v=5pBigy5Cwo8" target="_blank">https://www.youtube.com/watch?v=5pBigy5Cwo8</a></p><p>6个长宽高为a的金字塔组成长宽为a，高为2a的长方体。根据长方体公式，长方体体积为2*a*a*a。 于是每一个金字塔的体积为a*a*a/3。</p><p>接下来我们用学过的无限的概念来推导出同样的结论，并且是更一般性的结论。首先我们有一个长为a宽为b高为h的金字塔，或者长宽为w（便于计算）高为h的金字塔。</p><p>我们知道如果是长为a宽为b高为h的长方体，或者长宽为w高为h的长方体，那么根据定义，很容易计算出体积。现在我们要做的是，一点点改变这个长方体，让它越来越接近金字塔，并且计算它的体积，让我们的答案越来越接近金字塔的真实体积。当我们达到无限“精确”时，就得到了我们需要的公式。</p><p>我们首先将长方体从中间分开，底部保持不变，顶部的长宽分别为原长度的一半。这样新的物体的体积比起原来的长方体更接近于金字塔的真实体积。</p><div class="image-package">
-<img name="BD468262-871A-4510-AE24-FD8F83CA25CD.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-da1b009f8d3c4e5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-da1b009f8d3c4e5d.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-da1b009f8d3c4e5d.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
-</div><p><br></p><p>我们再进一步分割，如果将长方体均匀分成10份的话，我们新的物体的体积将是这样的。这样就比上面的结果更接近了。</p><div class="image-package">
-<img name="F53F3DF7-7987-44E6-97BB-6B6FB3053FE5.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-e236bced454da975.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-e236bced454da975.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-e236bced454da975.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
-</div><p><br></p><div class="image-package">
-<img name="E27336C4-07B3-4949-B89F-B6B1A107172C.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-fd7a9aa1e0f130db.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-fd7a9aa1e0f130db.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-fd7a9aa1e0f130db.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
-</div><p><br></p><p>当我们将长方体分割成n等份，n接近于无穷大时，新的物体将无限接近于金字塔。我们就得出了最终的体积公式。</p><p><br></p><div class="image-package">
-<img name="8049E9ED-76B5-4588-9463-28852ED8157A.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-ad7adbd419490182.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-ad7adbd419490182.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-ad7adbd419490182.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
-</div><p><br></p><div class="image-package">
-<img name="4F5D8141-8494-42ED-A463-6B7DFDA1FD9E.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-0025fda583903211.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-0025fda583903211.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-0025fda583903211.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-da1b009f8d3c4e5d.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-da1b009f8d3c4e5d.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="BD468262-871A-4510-AE24-FD8F83CA25CD.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-da1b009f8d3c4e5d.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
+</div><p><br/></p><p>我们再进一步分割，如果将长方体均匀分成10份的话，我们新的物体的体积将是这样的。这样就比上面的结果更接近了。</p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-e236bced454da975.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-e236bced454da975.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="F53F3DF7-7987-44E6-97BB-6B6FB3053FE5.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-e236bced454da975.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
+</div><p><br/></p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-fd7a9aa1e0f130db.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-fd7a9aa1e0f130db.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="E27336C4-07B3-4949-B89F-B6B1A107172C.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-fd7a9aa1e0f130db.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
+</div><p><br/></p><p>当我们将长方体分割成n等份，n接近于无穷大时，新的物体将无限接近于金字塔。我们就得出了最终的体积公式。</p><p><br/></p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-ad7adbd419490182.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-ad7adbd419490182.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="8049E9ED-76B5-4588-9463-28852ED8157A.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-ad7adbd419490182.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
+</div><p><br/></p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-0025fda583903211.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-0025fda583903211.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="4F5D8141-8494-42ED-A463-6B7DFDA1FD9E.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-0025fda583903211.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
 </div>
-        </div>
-      </div>
-    </div>
-  </body>
+</div>
+</div>
+</div>
+</body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微积分概念入门（二）</title>
-    <style type="text/css" media="all">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>微积分概念入门（二）</title>
+<style media="all" type="text/css">
       body {
         margin: 0;
         font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
@@ -51,21 +52,21 @@
         color: #28A1C5;
       }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="post">
-        <h1 class="title">微积分概念入门（二）</h1>
-        <div class="show-content">
-          <p>作者保留版权</p><p>上一篇文章我们通过极限的概念，以积分的手段推导出了三角形面积公式。下方的图片是一个简单的复习与回顾。</p><p><br></p><div class="image-package">
-<img name="7A0F9C68-2810-4AE5-B791-FC1B7E8151D9.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-3aa19729d649b476.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-3aa19729d649b476.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-3aa19729d649b476.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
+</head>
+<body>
+<div class="container">
+<div class="post">
+<h1 class="title">微积分概念入门（二）</h1>
+<div class="show-content">
+<p>作者保留版权</p><p>上一篇文章我们通过极限的概念，以积分的手段推导出了三角形面积公式。下方的图片是一个简单的复习与回顾。</p><p><br/></p><div class="image-package">
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-3aa19729d649b476.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-3aa19729d649b476.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="7A0F9C68-2810-4AE5-B791-FC1B7E8151D9.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-3aa19729d649b476.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
 </div><p>对于数学的学习来说，技巧属于nice to have；而定义、概念与理论则属于must have。微积分的概念就属于这种放之四海而皆准的分析问题的手段。下面我们用同样方法实测孩子对这个思维方式的掌握程度。</p><p>我们首先把自己的身位放在遥远的古代，人们想测量一个圆的面积。很显然，按照定义我们是无法直接给出圆的精确面积的。因为我们的定义是根据矩形得出的，由弧线围成的图形是无法与直角边match上。不过，根据圆的特点，有两个数值特征作为古人还是可以轻易拿到的。</p><p>第一：圆的半径， 直接测量即可</p><p>第二：圆的周长，即可以直接测量，也可以通过计算与观察得出。孩子提到古人应该意识不到PI是一个无理数，但是，古人经过不断观察，应该可以发现圆周与半径之间一定通过一个常数相连。当然在这里为了计算方便，我们假定古人已经知道C=2PI*R</p><p>具体的分析方法如下：</p><p>首先将一个圆按照等距分成n个同心圆。然后将同心圆以半径切一刀打开。将打开的同心圆依次重叠平铺，可以形成下面的三角形状。三角形的底边是最外圈的同心圆，长度为2PI*R。</p><div class="image-package">
-<img name="75B61AA2-6BA4-4D02-A4A5-1F67A42420A6.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-3f7d837912d51c82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-3f7d837912d51c82.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-3f7d837912d51c82.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-3f7d837912d51c82.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-3f7d837912d51c82.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="75B61AA2-6BA4-4D02-A4A5-1F67A42420A6.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-3f7d837912d51c82.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
 </div><p>上图中同心圆分割形成的三角形的面积，理论上一定与原来的圆面积相等。下面我们将三角形略微改变位置放置在数轴中观察。</p><p>很容易就会发现我们可以根据前次推导出来的三角形面积公式，推导出圆形的面积公式来。</p><p>不用每一道题都用上”特殊的技巧“，微积分就是这么朴实无华。</p><div class="image-package">
-<img name="174B27C2-86EA-4EC8-8F88-E41A5CC6AE31.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-7dd4ce13f2257165.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-7dd4ce13f2257165.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-7dd4ce13f2257165.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div>
+<img data-original-src="http://upload-images.jianshu.io/upload_images/1872427-7dd4ce13f2257165.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-7dd4ce13f2257165.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240" name="174B27C2-86EA-4EC8-8F88-E41A5CC6AE31.jpg" src="/home/andrew/PycharmProjects/updateHtml4Images/尘世小书虫/1872427-7dd4ce13f2257165.jpg"/><br/><div class="image-caption" contenteditable="false"></div>
 </div>
-        </div>
-      </div>
-    </div>
-  </body>
+</div>
+</div>
+</div>
+</body>
 </html>
