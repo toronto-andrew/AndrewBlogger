@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet退休之后能做什么？</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">Tablet退休之后能做什么？</h1>
+        <div class="show-content">
+          <p>家里最老的那个Tablet，运行的还是Android 4.x的系统，慢得连儿子都懒得玩上面的游戏。不过这里我撒了个小谎，其实家里还有台更古老的。是黑莓的playbook，历经风霜，质量还是杠杠的。但有一次恢复到出厂模式之后，才发现黑莓公司早就不support了，没法安装任何软件，只好变成砖头，现在垫桌角用。</p><p>我呢，以前总是用家里的台式机作服务器。350W的电源，每天24*7这么开着，既费电不环保，这嗡嗡声也很恼人。受儿子玩的Raspberry Pi的启发，我琢磨着能不能将这个老三星Tablet物尽其用，成为新的家庭服务器。毕竟它仅仅5-10W的耗电量还是非常非常绿色环保的。</p><p>首先，root了现有的Android系统。接下来考虑是不是有合适的Web Server等等软件。很可惜，经过封装后的Android系统对命令行的支持不方便，相关在google play上的server软件都是小众，玩票性质的，出现问题难找到support。于是开始考虑其它方案。</p><p>Android是基于Linux内核开发的操作系统，大多数Android的手机平板都是运行在ARM架构的CPU上，而Linux也有支持ARM架构的版本。这就说明从理论上完全可以将Linux安装到任何运行Android的设备上。经过调查，发现已经有好多人在这么做了。我也决定采用其中比较成熟的一个方案来安装配置新的服务器。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/1872427-1b4d0ac0d2eac3f7.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>首先，清理Tablet的存储空间，预留出超过4G的位置。</p><p>接下来，从App Store里面先安装BusyBox，它是一个最简版的Linux运行环境，好多定制的Linux都是以BusyBox为基础的。</p><p>之后，重头戏来了，需要安装本次的主角LinuxDeploy。它是GitHub上面的一个开源项目，目的就是为了在Android上运行Linux。你可以在App Store或者GitHub上找到它。</p><p>安装后就是设置。你可以选择多打20几种不同的Linux版本以供安装。还可以选择新的系统是不是需要GUI，还是仅仅使用Command Line。这里有一个很Trick的地方：由于你需要将新的Linux安装在一个很大的IMG文件里面，系统给的默认的IMG文件Size是4G。我尝试了若干次都不成功。直到登录到GitHub的讨论组里才发现有人给出了解决方法，原来IMG文件最大只能是2G。改到2G，顺利安装。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/1872427-47f250073a5fbaa7.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>我选择安装的是Debian Linux和最轻量级桌面环境。</p><p>最后，在平板上安装VNC Server来提供远程桌面支持。</p><p>接下来，从LinuxDeploy中启动新系统。顺利启动。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/1872427-b2833a30d32be329.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>由于我安装在一个7寸的平板上，虽然可以直接操作，但屏幕过小，再加上软键盘，十分不方便。别急，解决方案很简单。比如有人说，可以在平板的microUSB口上接入USB-Hub，再连接多个设备，比如：键盘、鼠标、甚至显示器（通过Usb2HDMI转接）。我试了一下，完全可行，但配置比较麻烦。第一，上面这些外接设备都需要从平板取点，而平板是电池供电，电量与功率都不够，需要使用时同时对HSB-Hub供电；第二，很luck，我的平板micro-usb支持MHL，可以输出高清。但这个MHL的协议有些混乱，不同厂家的支持还不一样，还好我用的是那个很大众的三星，小费一番周折还是能够找到配合的视频输出线。</p><p>其实现在我在用一种更简便的办法连接管理我的server：SSH和VNC。SSH是通过字符界面连接到平板的Linux上，对于我这样整天接触Command Line的人，绝对是快速又方便。准备工作只需要在Linux上面安装OpenSSH，然后按照Service启动，将你想要默认端口22从防火墙打开，之后就可以从客户端访问了。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/1872427-3a1ea7fac0e54669.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>VNC是Linux上最常用的远程桌面软件。Linux上面安装server端，启动。其它电脑上安装客户端，连接到server提供的URL上，登录密码就可以了。我在我的Windows PC和ChromeBook上分别安装了客户端，7寸屏幕的内容被映射到24寸显示器上，清晰也不慢。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/1872427-adfed4d4e8e7421e.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>接下来是软件安装和配置部分。这个小server上面我定制了10数个应用。</p><p>一个个人网站，内网的，没申请外网IP。在自己家里搭建一个，放些好玩的东西，蛮有意思的，更新起来也不需要FTP了，直接拷贝就可以了。服务器上顺便搭建了一个家庭相册，由于是局域网，速度很快。我用的是Apache Http Server，还有无数种其它组合。</p><p>一个家庭Security监控的中央管理器。家里淘汰不用的手机可以继续使用它的摄像头功能。安装上WebIP之类的软件，放到支架上可以替代闭路电视监控，在平板上可以统一进行控制，零成本。</p><p>一个Git服务器，用来存放自己的部分代码，比如有些代码不想放在github上的，可以放在这里。</p><p>一个BT下载机(transmission)，可以远程操作，随时随地的下载。</p><p>家庭NAS，把所有的文档、电影、音乐、照片都放在这里，共享出来，家里的所有设备（手机、平板、电视盒子、电脑）都可以随意存取，再也不用担心iPhone，iPad的空间不够了，随时可以看在线电影。</p><p>一个私有云服务ownCloud，可以在任何地方，包括用手机，上传下载文件，同步日历等。这个服务比较慢。</p><p>一个闹钟，整点会报时（早上第一次报时是儿子喊大家起床的录音），用Cronjob设置，顺便把当前本地的温度，要上班的城市的温度数都报出来，用的是Google的翻译引擎在线翻译。国内的朋友翻墙不方便，可以把翻译好的音频文件下载下来，也可以用。</p><p>用Cronjob在每周和每天不同的时间段，播放不同的儿歌，故事什么的，给家里的小朋友听，会不由自主的跟着学。</p><p>一个语音信箱，发送邮件到一个指定的邮箱，邮件的内容就会被转换成语音，从平板的音箱播放出来。这个服务也是用的Gppgle的TTS引擎。</p><p>网络收音机，用的不多，因为没时间去听。</p><p>一个邮件同步器，把我常用的邮箱定时同步到本地，用的是offlineimap，然后用mutt收发。</p><p>自动上传视频文件到google Drive，我用手机或者运动相机拍摄的视频，我只要把它拖到NAS的一个目录里面，脚本就会自动把这些视频重新命名，把文件名改成日期和时间，方便以后查找，然后自动上传到google drive，同时自动按日期分类。</p><p>一个网络跳板，我可以远程操作家里的电脑，因为家里的电脑主板支持WAKE-ON-LAN。这个和前面的几个功能一样，我没有申请公网IP，所以只能在家里用。</p><p>一个网站资源下载器，比如文章、图片。可以写一些脚本去解析你常去的小说网站，自动下载更新。用SQLite，重复文件自动删除。程序中把User Agent设置为知名浏览器，比如Chrome， IE等，否则可能会被拒绝下载。</p><p>一个dnsmasq服务，用来做内网的DNS服务器，解决了小宝看Netflix动画片上瘾的问题，cronjob定时把Netflix网址解析到127.0.0.1，只有规定的时间可以看。</p><p>平板上本身带的2G空间当然是不够的，我在外接了一个128G的U盘，mount到平板的Linux上。24x7工作，除了偶尔几次接口莫名其妙的接触不良，重新插拔一下就好了。</p><p>上面提到的各种应用，正常都在一个安装了Linux的普通PC上实现的，但是使用平板特别的地方，就是它的尺寸小，不耗电，无噪音，价格低。大部分人不会把一台PC放在家里24小时的开着，却可以接受平板这样24x7的开着。</p><p>作者保留版权</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

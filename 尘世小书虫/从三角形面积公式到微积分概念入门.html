@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从三角形面积公式到微积分概念入门</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">从三角形面积公式到微积分概念入门</h1>
+        <div class="show-content">
+          <p>作者保留版权</p><p>如果将数学比作一棵大树，那么初等数学是树的根，繁杂的数学分支就是树枝，而树干的主要部分就是微积分。准确的说，人类能够踏入工业化时代，微积分是最重要的基石。没有微积分，就没有工业革命。</p><p>对于人类的孩子来说，越早接触微积分的概念，理解并能够运用微积分的方式来分析数学/物理问题，就能够在人生的初期就打开一扇大窗，看见人类社会这两三百年的科学进步。</p><p>在大部分家长眼中，数学教师就是一个“工匠活”。好的教师，好的课外辅导班，过分看重解题技巧的灌输，而不注重数学知识体系的完整性，不注重从更高的观点讲授。绝大部分学生接触到的都是初等数学基础知识，或者课外的基本就是数学竞赛那一套，在学校里面很难接触到微积分以后的数学——微积分也是三百年前的数学了。而大多数人，哪怕接受过大学教育，终其一生，也没能接触到近现代数学。</p><p>当代教育系统的大纲，一般都是在高中的最后阶段开始引入公式化的微积分内容。事实上已经太晚了。孩子们已经被灌输了十几年的古典数学的思维方式，接受创新的数学思维的通道已经开始减弱。作为当代的虎爸虎妈，敢于创新，大胆尝试新的教育方式，就能够取得出其不意的成果。</p><p>以下为实战的成功例子：</p><p>知识预备：孩子要有一定的函数相关的运算知识。</p><p>首先跟孩子明确数学源自定义和公理。只有我们最初定义了1+1=2，才能推导出2+2=4，4+4=8...等等加法运算的逻辑合理性。同样，人类首先定义了“长度”。当发现需要描述几个线段连接到一起形成的2D图形的时候，发明了“面积”的概念。并定义了测量“面积”的方法 --- 当长宽各为单位“1”的时候，组合成的正方形的面积为1*1。</p><p>这个表述“面积”的方法，应用在正方形与长方形上，都非常容易测量与计算。但是当用到其它图形的时候，比如三角形，圆形，椭圆形等等，就因为无法将它们分割成小正方形来count，导致直观上没法子求的准确“面积”。<br></p><div class="image-package"><img name="C206464F-5CAE-4781-9AE6-E3FA1559EA9D.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-9ab3d3524bf1f483.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-9ab3d3524bf1f483.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-9ab3d3524bf1f483.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div></div><p><br></p><p></p><p>以三角形为例：孩子提到，除非在三角形里面画出无数个无穷小的正方形，不然按照定义没法算面积。同时，即使能够画出“无数个无穷小的正方形”，又因为“无穷小的正方形”的数量“无穷多”，不能计算(此处留下伏笔)。</p><p>在初等数学中，我们都是用“技巧”来推导出三角形的面积公式的。首先由特殊的直角三角形入手，然后扩展到一般三角形。通过画辅助线，得出无论什么形状的三角形，都可以用底*高/2来计算面积。推导方式简单直观，容易理解。但是只有一个缺点，该方法只能用在三角形求面积上面，对解决其它类似问题没有太大普遍意义。<br></p><div class="image-package"><img name="46266FB5-1863-4758-8EE0-BA6833D1C67C.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-a889d0eaaa547b3e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-a889d0eaaa547b3e.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-a889d0eaaa547b3e.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div></div><p><br></p><p></p><p>这个时候家长提到：”大多数人因为想到“无穷小的正方形”的数量“无穷多”，不能计算，于是放弃按照这个思路继续思考。只有牛顿一直想了下去，结果找到了计算方法，发明了微积分。并且，尽管微积分方法看起来不够简洁，步骤繁琐，但却具有普遍意义。所有的不能够由正方形组合成的图形面积，都可以由微积分用同样的思路来求出“</p><p>我们先设定一个三角形，底边为a，高为h。我们将三角形水平等距分成n份。这样整个三角形的面积，就等于所分的每一分的面积之和。当n趋向无穷大的时候，所有份数面积只和就越趋向于三角形的实际面积。<br></p><div class="image-package"><img name="08DA7F2F-E4B5-42CB-A4FF-877C31002AA3.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-57db5b8b077b6d45.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-57db5b8b077b6d45.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-57db5b8b077b6d45.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div></div><p><br></p><div class="image-package"><img name="1F31AFDD-98DC-4012-A346-11C16559993D.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-25618e680b3dfe13.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-25618e680b3dfe13.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-25618e680b3dfe13.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div></div><p><br></p><p></p><p>为了方便理解，我们先做一个小的变形，以三角形左为边，将n份进行左对齐。左对齐之后的三角形与原三角形等面积。根据三角形的特性，由三角形顶点向下，第一层可以看成一个小长方形（宽为a/n，高为h/n）；第2层以及以后各层顺势增加...</p><p>经过化简，三角形的面积被表达为一种基本的排列组合形式。这里家长用了特殊的”技巧“将排列组合转化为函数表达式。实际上可以采用更具有一般意义的微积分解法得到同样的函数表达式。</p><p>最后当n变成无穷大的时候，后面项的值无限趋近于0，被忽略。于是得出三角形的面积公式的表达式。</p><p>同样的方法，不仅仅可以运用在三角形求面积上，圆形、椭圆、球体、圆锥体、棱柱体...等等都可以推导出公式。所以，谁才是数学学习过程中的”屠龙宝刀“，不言而喻。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

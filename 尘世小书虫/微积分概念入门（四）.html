@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微积分概念入门（四）</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">微积分概念入门（四）</h1>
+        <div class="show-content">
+          <p>作者保留版权</p><p>如果大家有机会翻阅20世纪初美国哈佛大学的入学数学考试卷子，就会发现里面的内容简单到“令人发指”。就如今天的虎爸虎妈们对比20-30年前自己高考的考题和今年的试题，也会发现试卷的广度与难度都有明显的提高。一个笑话提到爱因斯坦的相对论刚发表的时期，全世界只有12个人能够理解他的理论；今天每一位大学中修物理专业的孩子，相对论和量子物理早就成为了必修课。</p><p>每一代人类的孩子们都有超越上一代人的聪明和理解力，家长万万不能沿用老一套 - "我当年是什么什么时候才学的什么什么..."，一定要创造机会给孩子，给予充分成长的空间。微积分算一个例子吧？它的思想贯穿了人类的整个工业革命，孩子越早理解掌握，就越有利于越早领略科学海洋的广阔与风浪。</p><p>但孩子自有自身的知识储备和理解力局限，接触微积分的途径断无法无高中孩子相同。应从他们已有的知识出发，多给予形象的例子，反复带领孩子理清思路，以积分为起始，首先明确微积分的基本分析方法。尤其重要的一点就是尽量使用浅显易懂的方式帮助孩子理解概念，而千万不要一上来就介绍微积分的符号。不然孩子一下子需要面对新的抽象概念和陌生符号，肯定是会打退堂鼓的。</p><p>虎爸虎妈遍寻了身边的林林种种微积分教材，很遗憾大多数教材都千篇一律，面向的阅读对象至少高中孩子，无法与上述的思路吻合。这样，只好想办法自己摸索合适小学程度孩子学习理解的微积分入门。</p><p>为了帮助孩子在大脑中形成积分的概念，昨晚虎爸与Eric再次review了通过三角形面积公式引入积分概念的过程。期间孩子提出了一个很有价值的问题，恰恰指出了大多数高中阶段微积分课本的不严谨之处，在此与大家共享。</p><p>孩子一直疑惑的地方是：先前通过在三角形内部分割小矩形来极限出面积。但是示例图中，我们采用的是内截矩形，总是会有一部分小三角形没有被计算在内。所以孩子直观感受下，最终得到的面积公式无论怎样都会缺少一些什么。</p><p><br></p><div class="image-package"><img name="41E148CC-9398-4478-A3D5-7EEFB498F003.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-560962ec90b18531.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-560962ec90b18531.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-560962ec90b18531.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div></div><p><br></p><p><br></p><p>那么究竟这些“多余的”小三角形，在极限分割的情况下，对最终的结果有无影响呢？</p><p>其实我们的祖先 - 3000年前的阿基米德已经给出了解决这类问题的思路。那就是从内向外和从外向内两个方向同时进行极值逼近，当n趋近于无穷大时，如果两种逼近的最终结果是一样的，我们就可以完美证明出这个公式是正确的。</p><p><br></p><div class="image-package"><img name="0B86300D-59AD-448B-B0CB-D3C9EC346DF1.jpg" src="http://upload-images.jianshu.io/upload_images/1872427-25b0bb8d60224297.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1872427-25b0bb8d60224297.jpg" data-src="//upload-images.jianshu.io/upload_images/1872427-25b0bb8d60224297.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1240"><br><div class="image-caption" contenteditable="false"></div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
